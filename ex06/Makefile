@@ -2,7 +2,7 @@ GXX = c++
 
 CFLAGS = -Wall -Werror -Wextra -g -std=c++98
 
-NAME = harl
+NAME = harlFilter
 
 SRC = main.cpp \
 		Harl.cpp
