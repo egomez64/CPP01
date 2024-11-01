@@ -7,13 +7,15 @@
 class Harl
 {
 public:
-	static void complain(const std::string &level);
+	Harl();
+	~Harl();
+	void complain(std::string level);
 
 private:
-	static void debug(void);
-	static void info(void);
-	static void warning(void);
-	static void error(void);
+	void debug(void);
+	void info(void);
+	void warning(void);
+	void error(void);
 };
 
 #endif
