@@ -21,10 +21,11 @@ bool Sed::parse(const std::string &filename, const std::string &s1, const std::s
 	if (s1 != s2)
 	{
 		size_t i = 0;
-		while ((i = buf.find(s1)) != std::string::npos)
+		while ((i = buf.find(s1, i)) != std::string::npos)
 		{
 			buf.erase(i, s1.size());
 			buf.insert(i, s2);
+			i += s2.size();
 		}
 	}
 	file_out << buf;

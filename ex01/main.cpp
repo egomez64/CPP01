@@ -14,15 +14,16 @@
 
 int	main(void)
 {
-//	const int nb = 8;
+	const int nb = 8;
 //	const int nb = -8;
 //	const int nb = 0;
 //	const int nb = 1000000000;
+	// const int nb = 1;
 	Zombie	*horde = zombieHorde(nb, "Foo");
 
 	if (!horde)
 		return (1);
-	for (int i = 0; i < 8; i++)
+	for (int i = 0; i < nb; i++)
 		horde[i].announce();
 	delete [] horde;
 }
